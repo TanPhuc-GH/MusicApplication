@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.kunminx.puremusic.ui.page.MainFragment"
+        android:name="com.hcmute.puremusic.ui.page.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
 

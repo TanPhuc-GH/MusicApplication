@@ -8,11 +8,11 @@
 
         <variable
             name="click"
-            type="com.kunminx.puremusic.ui.page.MainFragment.ClickProxy" />
+            type="com.hcmute.puremusic.ui.page.MainFragment.ClickProxy" />
 
         <variable
             name="vm"
-            type="com.kunminx.puremusic.ui.page.MainFragment.MainViewModel" />
+            type="com.hcmute.puremusic.ui.page.MainFragment.MainViewModel" />
 
         <variable
             name="adapter"

@@ -6,11 +6,11 @@
 
         <variable
             name="vm"
-            type="com.kunminx.puremusic.ui.page.DrawerFragment.DrawerViewModel" />
+            type="com.hcmute.puremusic.ui.page.DrawerFragment.DrawerViewModel" />
 
         <variable
             name="click"
-            type="com.kunminx.puremusic.ui.page.DrawerFragment.ClickProxy" />
+            type="com.hcmute.puremusic.ui.page.DrawerFragment.ClickProxy" />
 
         <variable
             name="adapter"

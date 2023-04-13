@@ -6,7 +6,7 @@
 
         <variable
             name="info"
-            type="com.kunminx.puremusic.data.bean.LibraryInfo" />
+            type="com.hcmute.puremusic.data.bean.LibraryInfo" />
 
     </data>
 

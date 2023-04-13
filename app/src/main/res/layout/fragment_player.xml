@@ -8,15 +8,15 @@
 
         <variable
             name="click"
-            type="com.kunminx.puremusic.ui.page.PlayerFragment.ClickProxy" />
+            type="com.hcmute.puremusic.ui.page.PlayerFragment.ClickProxy" />
 
         <variable
             name="listener"
-            type="com.kunminx.puremusic.ui.page.PlayerFragment.ListenerHandler" />
+            type="com.hcmute.puremusic.ui.page.PlayerFragment.ListenerHandler" />
 
         <variable
             name="vm"
-            type="com.kunminx.puremusic.ui.page.PlayerFragment.PlayerViewModel" />
+            type="com.hcmute.puremusic.ui.page.PlayerFragment.PlayerViewModel" />
 
     </data>
 
@@ -143,7 +143,7 @@
                 app:materialIconColor="@android:color/black"
                 app:materialIconSize="28dp" />
 
-            <com.kunminx.puremusic.ui.view.PlayPauseView
+            <com.hcmute.puremusic.ui.view.PlayPauseView
                 android:id="@+id/play_pause"
                 isPlaying="@{vm.isPlaying}"
                 onClickWithDebouncing="@{()->click.togglePlay()}"

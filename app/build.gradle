@@ -3,7 +3,7 @@ apply plugin: "com.android.application"
 android {
     compileSdkVersion appTargetSdk
     defaultConfig {
-        applicationId "com.kunminx.player"
+        applicationId "com.hcmute.player"
         minSdkVersion 23
         targetSdkVersion appTargetSdk
         versionCode appVersionCode

@@ -7,11 +7,11 @@
 
         <variable
             name="vm"
-            type="com.kunminx.puremusic.MainActivity.MainActivityViewModel" />
+            type="com.hcmute.puremusic.MainActivity.MainActivityViewModel" />
 
         <variable
             name="listener"
-            type="com.kunminx.puremusic.MainActivity.ListenerHandler" />
+            type="com.hcmute.puremusic.MainActivity.ListenerHandler" />
 
     </data>
 
