@@ -7,9 +7,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.hcmute.architecture.ui.adapter.CommonViewPagerAdapter;
 import com.hcmute.puremusic.R;
 
-/**
- * Create by KunMinX at 2020/3/13
- */
 public class TabPageBindingAdapter {
 
   @BindingAdapter(value = {"initTabAndPage"}, requireAll = false)

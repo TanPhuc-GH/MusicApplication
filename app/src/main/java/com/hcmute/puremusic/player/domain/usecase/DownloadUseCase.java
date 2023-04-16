@@ -10,9 +10,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-/**
- * Create by KunMinX at 20/03/16
- */
 public class DownloadUseCase extends UseCase<DownloadUseCase.RequestValues, DownloadUseCase.ResponseValue> {
 
   @Override

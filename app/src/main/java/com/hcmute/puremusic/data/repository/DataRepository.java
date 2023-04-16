@@ -59,7 +59,7 @@ public class DataRepository {
 
         if (downloadState.progress < 100) {
           downloadState.progress = downloadState.progress + 1;
-          Log.d("TAG", "下载进度 " + downloadState.progress + "%");
+          Log.d("TAG", "log " + downloadState.progress + "%");
         } else {
           timer.cancel();
         }

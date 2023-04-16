@@ -7,9 +7,6 @@ import com.hcmute.puremusic.ui.view.PlayPauseView;
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
-/**
- * Create by KunMinX at 2020/3/13
- */
 public class IconBindingAdapter {
 
   @BindingAdapter(value = {"isPlaying"}, requireAll = false)

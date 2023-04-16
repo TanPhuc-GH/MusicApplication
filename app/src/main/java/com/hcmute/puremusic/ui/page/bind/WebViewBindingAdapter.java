@@ -13,9 +13,7 @@ import androidx.databinding.BindingAdapter;
 
 import com.hcmute.architecture.utils.Utils;
 
-/**
- * Create by KunMinX at 2020/3/13
- */
+
 public class WebViewBindingAdapter {
 
   @SuppressLint("SetJavaScriptEnabled")
