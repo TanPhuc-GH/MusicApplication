@@ -4,9 +4,6 @@ import com.hcmute.player.PlayingInfoManager;
 import com.hcmute.player.bean.dto.ChangeMusic;
 import com.hcmute.player.bean.dto.PlayingMusic;
 
-/**
- * Create by KunMinX at 2022/7/4
- */
 public class PlayerEvent {
   public final static int EVENT_CHANGE_MUSIC = 1;
   public final static int EVENT_PROGRESS = 2;

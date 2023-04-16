@@ -1,8 +1,6 @@
 package com.hcmute.architecture.domain.usecase;
 
-/**
- * Interface for schedulers, see {@link UseCaseThreadPoolScheduler}.
- */
+
 public interface UseCaseScheduler {
 
   void execute(Runnable runnable);

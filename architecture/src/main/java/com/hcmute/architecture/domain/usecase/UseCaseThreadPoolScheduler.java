@@ -7,12 +7,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Executes asynchronous tasks using a {@link ThreadPoolExecutor}.
- * <p>
- * See also {@link Executors} for a list of factory methods to create common
- * {@link java.util.concurrent.ExecutorService}s for different scenarios.
- */
+
 public class UseCaseThreadPoolScheduler implements UseCaseScheduler {
 
   public static final int POOL_SIZE = 2;
@@ -22,9 +17,7 @@ public class UseCaseThreadPoolScheduler implements UseCaseScheduler {
   final ThreadPoolExecutor mThreadPoolExecutor;
   private final Handler mHandler = new Handler();
 
-  /**
-   * 固定线程数的无界线程池
-   */
+
   public UseCaseThreadPoolScheduler() {
     mThreadPoolExecutor = new ThreadPoolExecutor(FIXED_POOL_SIZE, FIXED_POOL_SIZE, TIMEOUT,
             TimeUnit.SECONDS, new LinkedBlockingQueue<>());

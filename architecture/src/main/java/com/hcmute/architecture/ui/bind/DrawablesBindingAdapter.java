@@ -1,4 +1,3 @@
-
 package com.hcmute.architecture.ui.bind;
 
 import android.annotation.SuppressLint;
@@ -23,9 +22,7 @@ import java.lang.reflect.Field;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;
 
-/**
- * Created by linjiang on 2018/9/5.
- */
+
 
 public class DrawablesBindingAdapter {
     private static final String TAG = "Drawables";
@@ -246,7 +243,7 @@ public class DrawablesBindingAdapter {
             "drawable_selected_ringInnerRadius",
             "drawable_selected_ringInnerRadiusRatio",
 
-            // normal, checked, checkable, enabled, focused, pressed, selected
+
 
             "drawable",
             "drawable_checked",
@@ -720,13 +717,12 @@ public class DrawablesBindingAdapter {
         if (selectedDrawable != null) {
             count++;
         }
-        //noinspection StatementWithEmptyBody
+
         if (count < 1) {
-            // impossible，因为该方法被调用说明至少声明了一条属性
         } else {
             boolean needReSetPadding = false;
             if (isDefaultNull || count == 1) {
-                // 当设置了margin（非view的margin）时，InsetDrawable会导致view本身的padding失效
+
                 needReSetPadding = true;
                 TMP_PADDING[0] = view.getPaddingLeft();
                 TMP_PADDING[1] = view.getPaddingTop();
@@ -801,7 +797,6 @@ public class DrawablesBindingAdapter {
                 && radialRadius == INVALID && width == INVALID && height == INVALID
                 && marginLeft == INVALID && marginTop == INVALID && marginRight == INVALID && marginBottom == INVALID
         ) {
-            // 这里需要判断empty，因为有可能只设置了一个state的drawable，那么其他state的就是empty了
             return null;
         }
         GradientDrawable drawable = new GradientDrawable();
@@ -836,7 +831,7 @@ public class DrawablesBindingAdapter {
         }
         drawable.setShape(validShapeMode(shapeMode));
         if (shapeMode == ShapeMode.RING) {
-            // 由于GradientDrawable中没有ring相关的公开API，所以使用反射，若对性能有要求，请注意。
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 setRingValue(drawable, ringThickness, ringThicknessRatio, ringInnerRadius, ringInnerRadiusRatio);
             }
@@ -852,7 +847,6 @@ public class DrawablesBindingAdapter {
             drawable.setCornerRadius(dip2px(radius));
         }
         if (width > 0 && height > 0) {
-            // https://stackoverflow.com/a/29180660/4698946
             drawable.setSize(dip2px(width), dip2px(height));
         }
         if (marginLeft != 0 || marginTop != 0 || marginRight != 0 || marginBottom != 0) {
@@ -947,16 +941,7 @@ public class DrawablesBindingAdapter {
     public @interface ShapeMode {
         int RECTANGLE = GradientDrawable.RECTANGLE;
         int OVAL = GradientDrawable.OVAL;
-        /**
-         * 画线时，有几点特性必须要知道的：
-         * 1. 只能画水平线，画不了竖线；
-         * 2. 线的高度是通过stroke的android:width属性设置的；
-         * 3. size的android:height属性定义的是整个形状区域的高度；
-         * 4. size的height必须大于stroke的width，否则，线无法显示；
-         * 5. 线在整个形状区域中是居中显示的；
-         * 6. 线左右两边会留有空白间距，线越粗，空白越大；
-         * 7. 引用虚线的view需要添加属性android:layerType，值设为"software"，否则显示不了虚线。
-         */
+
         int LINE = GradientDrawable.LINE;
         int RING = GradientDrawable.RING;
     }

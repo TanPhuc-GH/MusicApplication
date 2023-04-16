@@ -1,11 +1,6 @@
 package com.hcmute.architecture.domain.usecase;
 
-/**
- * Use cases are the entry points to the domain layer.
- *
- * @param <Q> the request type
- * @param <P> the response type
- */
+
 public abstract class UseCase<Q extends UseCase.RequestValues, P extends UseCase.ResponseValue> {
 
   private Q mRequestValues;
