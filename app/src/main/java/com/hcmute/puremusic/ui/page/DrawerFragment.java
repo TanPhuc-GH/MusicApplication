@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModel;
 
-import com.hcmute.architecture.ui.page.BaseFragment;
+import com.hcmute.architecture.domain.usecase.ui.page.BaseFragment;
 import com.hcmute.puremusic.BR;
 import com.hcmute.puremusic.R;
 import com.hcmute.puremusic.data.bean.LibraryInfo;

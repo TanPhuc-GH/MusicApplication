@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import com.hcmute.architecture.ui.page.BaseActivity;
+import com.hcmute.architecture.domain.usecase.ui.page.BaseActivity;
 import com.hcmute.puremusic.player.domain.message.DrawerCoordinateManager;
 import com.hcmute.puremusic.player.domain.message.PageMessenger;
 import com.kunminx.architecture.ui.page.DataBindingConfig;

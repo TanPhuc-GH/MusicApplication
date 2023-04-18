@@ -1,4 +1,4 @@
-package com.hcmute.architecture.ui.adapter;
+package com.hcmute.architecture.domain.usecase.ui.adapter;
 
 
 import android.view.View;

@@ -3,9 +3,7 @@ package com.hcmute.architecture.utils;
 import android.content.Context;
 import android.widget.Toast;
 
-/**
- * Create by KunMinX at 2021/8/19
- */
+
 public class ToastUtils {
 
   public static void showLongToast(Context context, String text) {

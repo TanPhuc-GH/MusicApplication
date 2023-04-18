@@ -5,14 +5,7 @@ import android.view.View;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 
-/**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2019/06/12
- *     desc  : utils about click
- * </pre>
- */
+
 public class ClickUtils {
 
   private static final int DEBOUNCING_TAG = -7;
@@ -23,34 +16,16 @@ public class ClickUtils {
   }
 
 
-  /**
-   * Apply single debouncing for the view's click.
-   *
-   * @param view     The view.
-   * @param listener The listener.
-   */
   public static void applySingleDebouncing(final View view, final View.OnClickListener listener) {
     applySingleDebouncing(new View[]{view}, listener);
   }
 
 
-  /**
-   * Apply single debouncing for the views' click.
-   *
-   * @param views    The views.
-   * @param listener The listener.
-   */
   public static void applySingleDebouncing(final View[] views, final View.OnClickListener listener) {
     applySingleDebouncing(views, DEBOUNCING_DEFAULT_VALUE, listener);
   }
 
-  /**
-   * Apply single debouncing for the views' click.
-   *
-   * @param views    The views.
-   * @param duration The duration of debouncing.
-   * @param listener The listener.
-   */
+
   public static void applySingleDebouncing(final View[] views,
                                            @IntRange(from = 0) long duration,
                                            final View.OnClickListener listener) {

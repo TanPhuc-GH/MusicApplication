@@ -1,4 +1,4 @@
-package com.hcmute.architecture.ui.page;
+package com.hcmute.architecture.domain.usecase.ui.page;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.hcmute.architecture.ui.bind;
+package com.hcmute.architecture.domain.usecase.ui.bind;
 
 import android.annotation.SuppressLint;
 import android.content.res.Resources;

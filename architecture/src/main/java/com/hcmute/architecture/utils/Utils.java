@@ -23,25 +23,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * <pre>
- *     author:
- *                                      ___           ___           ___         ___
- *         _____                       /  /\         /__/\         /__/|       /  /\
- *        /  /::\                     /  /::\        \  \:\       |  |:|      /  /:/
- *       /  /:/\:\    ___     ___    /  /:/\:\        \  \:\      |  |:|     /__/::\
- *      /  /:/~/::\  /__/\   /  /\  /  /:/~/::\   _____\__\:\   __|  |:|     \__\/\:\
- *     /__/:/ /:/\:| \  \:\ /  /:/ /__/:/ /:/\:\ /__/::::::::\ /__/\_|:|____    \  \:\
- *     \  \:\/:/~/:/  \  \:\  /:/  \  \:\/:/__\/ \  \:\~~\~~\/ \  \:\/:::::/     \__\:\
- *      \  \::/ /:/    \  \:\/:/    \  \::/       \  \:\  ~~~   \  \::/~~~~      /  /:/
- *       \  \:\/:/      \  \::/      \  \:\        \  \:\        \  \:\         /__/:/
- *        \  \::/        \__\/        \  \:\        \  \:\        \  \:\        \__\/
- *         \__\/                       \__\/         \__\/         \__\/
- *     blog  : http://blankj.com
- *     time  : 16/12/08
- *     desc  : utils about initialization
- * </pre>
- */
+
 public final class Utils {
 
   private static final String PERMISSION_ACTIVITY_CLASS_NAME =
@@ -56,12 +38,7 @@ public final class Utils {
     throw new UnsupportedOperationException("u can't instantiate me...");
   }
 
-  /**
-   * Init utils.
-   * <p>Init it in the class of Application.</p>
-   *
-   * @param context context
-   */
+
   public static void init(final Context context) {
     if (context == null) {
       init(getApplicationByReflect());
@@ -70,12 +47,7 @@ public final class Utils {
     init((Application) context.getApplicationContext());
   }
 
-  /**
-   * Init utils.
-   * <p>Init it in the class of Application.</p>
-   *
-   * @param app application
-   */
+
   public static void init(final Application app) {
     if (sApplication == null) {
       if (app == null) {
@@ -94,11 +66,7 @@ public final class Utils {
     }
   }
 
-  /**
-   * Return the context of Application object.
-   *
-   * @return the context of Application object
-   */
+
   public static Application getApp() {
     if (sApplication != null) {
       return sApplication;
@@ -134,10 +102,6 @@ public final class Utils {
   public interface OnActivityDestroyedListener {
     void onActivityDestroyed(Activity activity);
   }
-
-  ///////////////////////////////////////////////////////////////////////////
-  // interface
-  ///////////////////////////////////////////////////////////////////////////
 
   static class ActivityLifecycleImpl implements ActivityLifecycleCallbacks {
 

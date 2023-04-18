@@ -4,7 +4,7 @@ import androidx.databinding.BindingAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.hcmute.architecture.ui.adapter.CommonViewPagerAdapter;
+import com.hcmute.architecture.domain.usecase.ui.adapter.CommonViewPagerAdapter;
 import com.hcmute.puremusic.R;
 
 public class TabPageBindingAdapter {

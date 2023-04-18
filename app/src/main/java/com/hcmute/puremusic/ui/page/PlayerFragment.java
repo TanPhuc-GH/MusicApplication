@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModel;
 
-import com.hcmute.architecture.ui.page.BaseFragment;
+import com.hcmute.architecture.domain.usecase.ui.page.BaseFragment;
 import com.hcmute.architecture.utils.ToastUtils;
 import com.hcmute.architecture.utils.Utils;
 import com.hcmute.player.PlayingInfoManager;

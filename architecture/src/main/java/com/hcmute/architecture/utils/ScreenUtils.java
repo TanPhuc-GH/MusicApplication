@@ -22,25 +22,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresPermission;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : utils about screen
- * </pre>
- */
+
 public final class ScreenUtils {
 
   private ScreenUtils() {
     throw new UnsupportedOperationException("u can't instantiate me...");
   }
 
-  /**
-   * Return the width of screen, in pixel.
-   *
-   * @return the width of screen, in pixel
-   */
+
   public static int getScreenWidth() {
     WindowManager wm = (WindowManager) Utils.getApp().getSystemService(Context.WINDOW_SERVICE);
     Point point = new Point();
@@ -50,11 +39,6 @@ public final class ScreenUtils {
     return point.x;
   }
 
-  /**
-   * Return the height of screen, in pixel.
-   *
-   * @return the height of screen, in pixel
-   */
   public static int getScreenHeight() {
     WindowManager wm = (WindowManager) Utils.getApp().getSystemService(Context.WINDOW_SERVICE);
     Point point = new Point();
@@ -64,47 +48,26 @@ public final class ScreenUtils {
     return point.y;
   }
 
-  /**
-   * Return the density of screen.
-   *
-   * @return the density of screen
-   */
   public static float getScreenDensity() {
     return Resources.getSystem().getDisplayMetrics().density;
   }
 
-  /**
-   * Return the screen density expressed as dots-per-inch.
-   *
-   * @return the screen density expressed as dots-per-inch
-   */
+
   public static int getScreenDensityDpi() {
     return Resources.getSystem().getDisplayMetrics().densityDpi;
   }
 
-  /**
-   * Set full screen.
-   *
-   * @param activity The activity.
-   */
+
   public static void setFullScreen(@NonNull final AppCompatActivity activity) {
     activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
   }
 
-  /**
-   * Set non full screen.
-   *
-   * @param activity The activity.
-   */
+
   public static void setNonFullScreen(@NonNull final AppCompatActivity activity) {
     activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
   }
 
-  /**
-   * Toggle full screen.
-   *
-   * @param activity The activity.
-   */
+
   public static void toggleFullScreen(@NonNull final AppCompatActivity activity) {
     int fullScreenFlag = WindowManager.LayoutParams.FLAG_FULLSCREEN;
     Window window = activity.getWindow();
@@ -117,61 +80,31 @@ public final class ScreenUtils {
     }
   }
 
-  /**
-   * Return whether screen is full.
-   *
-   * @param activity The activity.
-   * @return {@code true}: yes<br>{@code false}: no
-   */
   public static boolean isFullScreen(@NonNull final AppCompatActivity activity) {
     int fullScreenFlag = WindowManager.LayoutParams.FLAG_FULLSCREEN;
     return (activity.getWindow().getAttributes().flags & fullScreenFlag) == fullScreenFlag;
   }
 
-  /**
-   * Return whether screen is landscape.
-   *
-   * @return {@code true}: yes<br>{@code false}: no
-   */
+
   public static boolean isLandscape() {
     return Utils.getApp().getResources().getConfiguration().orientation
             == Configuration.ORIENTATION_LANDSCAPE;
   }
 
-  /**
-   * Set the screen to landscape.
-   *
-   * @param activity The activity.
-   */
   public static void setLandscape(@NonNull final AppCompatActivity activity) {
     activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
   }
 
-  /**
-   * Return whether screen is portrait.
-   *
-   * @return {@code true}: yes<br>{@code false}: no
-   */
   public static boolean isPortrait() {
     return Utils.getApp().getResources().getConfiguration().orientation
             == Configuration.ORIENTATION_PORTRAIT;
   }
 
-  /**
-   * Set the screen to portrait.
-   *
-   * @param activity The activity.
-   */
+
   public static void setPortrait(@NonNull final AppCompatActivity activity) {
     activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
   }
 
-  /**
-   * Return the rotation of screen.
-   *
-   * @param activity The activity.
-   * @return the rotation of screen
-   */
   @SuppressLint("SwitchIntDef")
   public static int getScreenRotation(@NonNull final AppCompatActivity activity) {
     switch (activity.getWindowManager().getDefaultDisplay().getRotation()) {
@@ -186,23 +119,11 @@ public final class ScreenUtils {
     }
   }
 
-  /**
-   * Return the bitmap of screen.
-   *
-   * @param activity The activity.
-   * @return the bitmap of screen
-   */
   public static Bitmap screenShot(@NonNull final AppCompatActivity activity) {
     return screenShot(activity, false);
   }
 
-  /**
-   * Return the bitmap of screen.
-   *
-   * @param activity          The activity.
-   * @param isDeleteStatusBar True to delete status bar, false otherwise.
-   * @return the bitmap of screen
-   */
+
   public static Bitmap screenShot(@NonNull final AppCompatActivity activity, boolean isDeleteStatusBar) {
     View decorView = activity.getWindow().getDecorView();
     decorView.setDrawingCacheEnabled(true);
@@ -232,22 +153,12 @@ public final class ScreenUtils {
     return ret;
   }
 
-  /**
-   * Return whether screen is locked.
-   *
-   * @return {@code true}: yes<br>{@code false}: no
-   */
   public static boolean isScreenLock() {
     KeyguardManager km =
             (KeyguardManager) Utils.getApp().getSystemService(Context.KEYGUARD_SERVICE);
     return km.inKeyguardRestrictedInputMode();
   }
 
-  /**
-   * Return the duration of sleep.
-   *
-   * @return the duration of sleep.
-   */
   public static int getSleepDuration() {
     try {
       return Settings.System.getInt(
@@ -260,12 +171,6 @@ public final class ScreenUtils {
     }
   }
 
-  /**
-   * Set the duration of sleep.
-   * <p>Must hold {@code <uses-permission android:name="android.permission.WRITE_SETTINGS" />}</p>
-   *
-   * @param duration The duration.
-   */
   @RequiresPermission(WRITE_SETTINGS)
   public static void setSleepDuration(final int duration) {
     Settings.System.putInt(
@@ -275,11 +180,6 @@ public final class ScreenUtils {
     );
   }
 
-  /**
-   * Return whether device is tablet.
-   *
-   * @return {@code true}: yes<br>{@code false}: no
-   */
   public static boolean isTablet() {
     return (Utils.getApp().getResources().getConfiguration().screenLayout
             & Configuration.SCREENLAYOUT_SIZE_MASK)
